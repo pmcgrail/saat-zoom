@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {
   AngularFirestore,
   DocumentChangeAction,
+  CollectionReference,
 } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -16,7 +17,9 @@ export class CallsService {
 
   getCalls(): Observable<IZoomCall[]> {
     return this.firestore
-      .collection('calls')
+      .collection('calls', (ref: CollectionReference) => {
+        return ref.orderBy('datetime').startAfter(new Date());
+      })
       .snapshotChanges()
       .pipe(
         map((calls: DocumentChangeAction<any>[]) => {
