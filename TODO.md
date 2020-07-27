@@ -31,9 +31,9 @@ TODO:
 - [x] 0.0.1
 - [x] list all upcoming zoom calls
 - [x] 0.0.2
-- [ ] firebase store for zoom calls
-- [ ] render list based on firebase data
-- [ ] 0.0.3
+- [x] firebase store for zoom calls
+- [x] render list based on firebase data
+- [x] 0.0.3
 - [ ] firebase auth for admins
 - [ ] admin page to create zoom calls
 - [ ] 0.1.0

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+
 import { IZoomCall } from 'src/app/models';
+import { CallsService } from '../../providers/calls.service';
 
 @Component({
   selector: 'app-home',
@@ -7,18 +10,9 @@ import { IZoomCall } from 'src/app/models';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  calls: IZoomCall[] = [
-    {
-      datetime: 1596067200000,
-      host: 'Matt Delatour',
-    },
-    {
-      datetime: 1596243600000,
-      host: 'Shelly Rottenberg',
-    },
-  ];
+  calls$: Observable<IZoomCall[]> = this.service.getCalls();
 
-  constructor() {}
+  constructor(private service: CallsService) {}
 
   ngOnInit(): void {}
 }
