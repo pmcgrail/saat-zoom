@@ -1,3 +1,13 @@
 mat-card {
   margin-bottom: 1em;
+  font-size: 16px;
+  display: grid;
+  .datetime {
+    font-weight: 500;
+    margin-bottom: 0.3em;
+  }
+  .host {
+    font-weight: 500;
+    margin-top: 0.3em;
+  }
 }

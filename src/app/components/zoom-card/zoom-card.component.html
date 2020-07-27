@@ -1,5 +1,7 @@
 <mat-card>
-  <div>{{ call.datetime | date: "h:mm a MM/dd/yy" }}</div>
+  <div class="datetime">
+    {{ call.datetime | date: "EEEE, MM/dd/yy 'at' h:mm a" }}
+  </div>
   <div>and will be hosted by</div>
-  <div>{{ call.host }}</div>
+  <div class="host">{{ call.host }}</div>
 </mat-card>
