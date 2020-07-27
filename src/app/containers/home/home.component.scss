@@ -1,20 +1,18 @@
 .home-container {
   margin: 2em;
 
-  app-zoom-card {
-    width: 300px;
-  }
-
-  .next-call {
-    display: flex;
-  }
-
   .upcoming-calls {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
 
-    app-zoom-card {
-      margin-right: 1em;
+    @media screen and (min-width: 360px) {
+      flex-direction: row;
+
+      app-zoom-card {
+        width: 360px;
+        margin-right: 1em;
+      }
     }
   }
 }
