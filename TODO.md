@@ -26,16 +26,16 @@
 
 TODO:
 
-- [ ] 0.0.1
-- [ ] create home page to display next zoom call
-  - [ ] date, time, host
-- [ ] 0.0.2
+- [x] create home page to display next zoom call
+  - [x] date, time, host
+- [x] 0.0.1
 - [ ] list all upcoming zoom calls
-- [ ] 0.0.3
+- [ ] 0.0.2
 - [ ] firebase store for zoom calls
 - [ ] render list based on firebase data
-- [ ] 0.1.0
+- [ ] 0.0.3
 - [ ] firebase auth for admins
 - [ ] admin page to create zoom calls
-- [ ] 0.1.1
+- [ ] 0.1.0
 - [ ] admin page to manage all zoom calls
+- [ ] 0.1.1
