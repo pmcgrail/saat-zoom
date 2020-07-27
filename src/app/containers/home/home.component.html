@@ -1,6 +1,6 @@
 <div class="home-container">
   <ng-container *ngIf="calls$ | async as calls">
-    <h2>The next Zoom call is scheduled for:</h2>
+    <h2>The next call:</h2>
     <div class="upcoming-calls">
       <app-zoom-card class="next" [call]="calls[0]"> </app-zoom-card>
     </div>

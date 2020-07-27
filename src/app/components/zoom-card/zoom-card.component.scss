@@ -4,10 +4,13 @@ mat-card {
   display: grid;
   .datetime {
     font-weight: 500;
-    margin-bottom: 0.3em;
+    margin-bottom: 1em;
   }
   .host {
     font-weight: 500;
-    margin-top: 0.3em;
+    .label {
+      font-weight: 400;
+      margin-right: 1em;
+    }
   }
 }
