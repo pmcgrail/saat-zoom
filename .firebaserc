@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "saat-zoom": {
+      "hosting": {
+        "saat-zoom": [
+          "saat-zoom"
+        ]
+      }
+    }
+  }
+}
