@@ -1,3 +1,20 @@
 .home-container {
   margin: 2em;
+
+  app-zoom-card {
+    width: 300px;
+  }
+
+  .next-call {
+    display: flex;
+  }
+
+  .upcoming-calls {
+    display: flex;
+    flex-wrap: wrap;
+
+    app-zoom-card {
+      margin-right: 1em;
+    }
+  }
 }
