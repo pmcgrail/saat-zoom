@@ -1,4 +1,8 @@
 <div class="home-container">
-  <h1>The next zoom call is scheduled for:</h1>
-  <app-zoom-card class="next" [call]="nextCall"> </app-zoom-card>
+  <h2>The next zoom call is scheduled for:</h2>
+  <app-zoom-card class="next" [call]="calls[0]"> </app-zoom-card>
+  <h2>All upcoming calls:</h2>
+  <ng-container *ngFor="let call of calls">
+    <app-zoom-card [call]="call"></app-zoom-card>
+  </ng-container>
 </div>

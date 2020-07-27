@@ -29,8 +29,8 @@ TODO:
 - [x] create home page to display next zoom call
   - [x] date, time, host
 - [x] 0.0.1
-- [ ] list all upcoming zoom calls
-- [ ] 0.0.2
+- [x] list all upcoming zoom calls
+- [x] 0.0.2
 - [ ] firebase store for zoom calls
 - [ ] render list based on firebase data
 - [ ] 0.0.3

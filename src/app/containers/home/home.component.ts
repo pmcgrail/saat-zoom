@@ -7,10 +7,16 @@ import { IZoomCall } from 'src/app/models';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  nextCall: IZoomCall = {
-    datetime: 1596067200000,
-    host: 'Matt Delatour',
-  };
+  calls: IZoomCall[] = [
+    {
+      datetime: 1596067200000,
+      host: 'Matt Delatour',
+    },
+    {
+      datetime: 1596243600000,
+      host: 'Shelly Rottenberg',
+    },
+  ];
 
   constructor() {}
 
