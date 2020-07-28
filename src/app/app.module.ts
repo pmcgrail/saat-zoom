@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 
@@ -12,6 +13,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './containers/home/home.component';
 import { ZoomCardComponent } from './components/zoom-card/zoom-card.component';
 import { HeaderComponent } from './components/header/header.component';
+import { AboutComponent } from './containers/about/about.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,7 @@ import { HeaderComponent } from './components/header/header.component';
     HomeComponent,
     ZoomCardComponent,
     HeaderComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,6 +29,7 @@ import { HeaderComponent } from './components/header/header.component';
     BrowserAnimationsModule,
     MatCardModule,
     MatToolbarModule,
+    MatIconModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
   ],
