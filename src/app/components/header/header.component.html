@@ -1,5 +1,11 @@
 <mat-toolbar>
   <span class="title" routerLink="">Subtle Asian Adoptee Zoom Calls</span>
   <span class="spacer"></span>
-  <mat-icon class="about-link" routerLink="about">help</mat-icon>
+  <button mat-icon-button class="menu" [matMenuTriggerFor]="menu">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item class="link" routerLink="info">Ice-breakers</button>
+    <button mat-menu-item class="link" routerLink="about">About</button>
+  </mat-menu>
 </mat-toolbar>
