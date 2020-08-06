@@ -15,6 +15,7 @@ import { HomeComponent } from './containers/home/home.component';
 import { ZoomCardComponent } from './components/zoom-card/zoom-card.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AboutComponent } from './containers/about/about.component';
+import { InfoComponent } from './containers/info/info.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { AboutComponent } from './containers/about/about.component';
     ZoomCardComponent,
     HeaderComponent,
     AboutComponent,
+    InfoComponent,
   ],
   imports: [
     BrowserModule,

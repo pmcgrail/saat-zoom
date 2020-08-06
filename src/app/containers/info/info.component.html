@@ -1,0 +1,20 @@
+<div class="info-container">
+  <div class="header">Breakout Room Help</div>
+
+  <h3>Introductions</h3>
+  <div>
+    If you find yourself in a breakout room with people you haven't had a chance
+    to interact with yet, our typical introductions include name, age, pronouns,
+    where you're adopted from, where you live now, and what you're doing for
+    school or work. You can include as much or as little information as you feel
+    comfortable sharing.
+  </div>
+  <br />
+  <h3>Ice-Breakers</h3>
+  <div>
+    Random topics to discuss if your breakout room is dead:
+  </div>
+  <div *ngIf="question$ | async as question">
+    {{ question.text }}
+  </div>
+</div>

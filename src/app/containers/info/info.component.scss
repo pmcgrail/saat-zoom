@@ -1,0 +1,11 @@
+.info-container {
+  margin: 1em;
+
+  .header {
+    text-align: center;
+  }
+
+  @media screen and (min-width: 480px) {
+    margin: 2em;
+  }
+}
