@@ -14,7 +14,7 @@
   <div>
     Random topics to discuss if your breakout room is dead:
   </div>
-  <div *ngIf="question$ | async as question">
-    {{ question.text }}
+  <div *ngIf="question$ | async as question" class="question-container">
+    <app-question-card [question]="question"></app-question-card>
   </div>
 </div>
