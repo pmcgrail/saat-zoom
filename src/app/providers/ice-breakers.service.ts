@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import {
   AngularFirestore,
-  DocumentSnapshot,
-  Action,
   CollectionReference,
   DocumentChangeAction,
 } from '@angular/fire/firestore';
