@@ -1,14 +1,22 @@
 <div class="home-container">
   <ng-container *ngIf="calls$ | async as calls">
-    <h2>The next call:</h2>
-    <div class="upcoming-calls">
-      <app-zoom-card class="next" [call]="calls[0]"> </app-zoom-card>
-    </div>
-    <h2>All upcoming calls:</h2>
-    <div class="upcoming-calls">
-      <ng-container *ngFor="let call of calls">
-        <app-zoom-card [call]="call"></app-zoom-card>
+    <ng-container *ngIf="calls.length; else empty">
+      <h2>The next call:</h2>
+      <div class="upcoming-calls">
+        <app-zoom-card class="next" [call]="calls[0]"> </app-zoom-card>
+      </div>
+      <ng-container *ngIf="calls.length > 1">
+        <h2>Other upcoming calls:</h2>
+        <div class="upcoming-calls">
+          <ng-container *ngFor="let call of calls.slice(1)">
+            <app-zoom-card [call]="call"></app-zoom-card>
+          </ng-container>
+        </div>
       </ng-container>
-    </div>
+    </ng-container>
   </ng-container>
 </div>
+
+<ng-template #empty>
+  <div>No upcoming calls yet, check back later!</div>
+</ng-template>
