@@ -18,11 +18,13 @@ export class CallsService {
   getCalls(): Observable<IZoomCall[]> {
     return this.firestore
       .collection('calls', (ref: CollectionReference) => {
-        return ref.orderBy('datetime').startAfter(new Date());
+        return ref
+          .orderBy('datetime')
+          .startAfter(new Date(new Date().getTime() - 1000 * 60 * 60 * 12));
       })
       .snapshotChanges()
       .pipe(
-        map((calls: DocumentChangeAction<any>[]) => {
+        map((calls: DocumentChangeAction<IZoomCall>[]) => {
           return calls.map((call: DocumentChangeAction<any>) => {
             const data = call.payload.doc.data();
             return {
