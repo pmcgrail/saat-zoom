@@ -1,5 +1,5 @@
 <mat-card>
-  <a target="_blank" [href]="call.link">
+  <a target="_blank" [attr.href]="call.link || null">
     <div class="datetime">
       {{ call.datetime | date: "EEEE, MM/dd/yy 'at' h:mm a" }}
     </div>
