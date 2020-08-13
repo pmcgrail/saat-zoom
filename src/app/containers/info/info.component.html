@@ -29,4 +29,9 @@
       (refresh)="refreshQuestion()"
     ></app-question-card>
   </div>
+  <br />
+  <h3>
+    Submit a question:
+  </h3>
+  <app-question-form (submitted)="submitQuestion($event)"></app-question-form>
 </div>

@@ -1,0 +1,15 @@
+.question-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  input[type="text"] {
+    padding: 0.5em;
+    border: 1px solid;
+    border-radius: 0.25em;
+
+    &.error {
+      border-color: #e00000;
+    }
+  }
+}

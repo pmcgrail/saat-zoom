@@ -1,0 +1,10 @@
+<mat-card>
+  <form class="question-form" [formGroup]="form">
+    <input
+      type="text"
+      formControlName="text"
+      [class.error]="form.controls.text.touched && form.controls.text.errors"
+    />
+    <mat-icon (click)="submitQuestion()">check</mat-icon>
+  </form>
+</mat-card>

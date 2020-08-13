@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 import { IceBreakersService } from '../../providers/ice-breakers.service';
-import { tap } from 'rxjs/operators';
+import { SuggestionsService } from 'src/app/providers/suggestions.service';
+import { IQuestion } from 'src/app/models';
 
 @Component({
   selector: 'app-info',
@@ -11,10 +12,17 @@ import { tap } from 'rxjs/operators';
 export class InfoComponent implements OnInit {
   question$ = this.iceBreakersService.getRandomQuestion();
 
-  constructor(private iceBreakersService: IceBreakersService) {}
+  constructor(
+    private iceBreakersService: IceBreakersService,
+    private suggestionsService: SuggestionsService
+  ) {}
 
   refreshQuestion() {
     this.question$ = this.iceBreakersService.getRandomQuestion();
+  }
+
+  async submitQuestion(question: IQuestion) {
+    await this.suggestionsService.submitQuestion(question);
   }
 
   ngOnInit(): void {}

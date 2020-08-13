@@ -38,6 +38,8 @@ TODO:
 - [x] 0.0.4
 - [x] add info page
 - [x] 0.0.5
+- [x] submit a question
+- [x] 0.0.6
 - [ ] firebase auth for admins
 - [ ] admin page to create zoom calls
 - [ ] 0.1.0

@@ -17,6 +17,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { AboutComponent } from './containers/about/about.component';
 import { InfoComponent } from './containers/info/info.component';
 import { QuestionCardComponent } from './components/question-card/question-card.component';
+import { QuestionFormComponent } from './components/question-form/question-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,7 @@ import { QuestionCardComponent } from './components/question-card/question-card.
     AboutComponent,
     InfoComponent,
     QuestionCardComponent,
+    QuestionFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,6 +41,7 @@ import { QuestionCardComponent } from './components/question-card/question-card.
     MatMenuModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
