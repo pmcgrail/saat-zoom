@@ -1,3 +1,8 @@
-<mat-card>
-  {{ question.text }}
+<mat-card class="question-card">
+  <div>
+    {{ question.text }}
+  </div>
+  <div class="refresh" (click)="refresh.emit()">
+    <mat-icon>refresh</mat-icon>
+  </div>
 </mat-card>

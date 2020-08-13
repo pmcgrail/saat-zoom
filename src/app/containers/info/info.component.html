@@ -10,11 +10,23 @@
     comfortable sharing.
   </div>
   <br />
+  <h3>Ask for Help</h3>
+  <div>
+    If at any time you feel uncomfortable in a breakout room, you can return to
+    the main room by pressing Leave Room (it will give you the option to leave
+    the breakout room or leave the call completely). You can also press the Ask
+    for Help button to summon the host to your breakout room and then message
+    them privately, or reach out via Facebook Messenger.
+  </div>
+  <br />
   <h3>Ice-Breakers</h3>
   <div>
     Random topics to discuss if your breakout room is dead:
   </div>
   <div *ngIf="question$ | async as question" class="question-container">
-    <app-question-card [question]="question"></app-question-card>
+    <app-question-card
+      [question]="question"
+      (refresh)="refreshQuestion()"
+    ></app-question-card>
   </div>
 </div>

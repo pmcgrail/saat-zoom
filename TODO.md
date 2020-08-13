@@ -36,6 +36,8 @@ TODO:
 - [x] 0.0.3
 - [x] about page from Shelly
 - [x] 0.0.4
+- [x] add info page
+- [x] 0.0.5
 - [ ] firebase auth for admins
 - [ ] admin page to create zoom calls
 - [ ] 0.1.0

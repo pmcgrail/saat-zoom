@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 import { IQuestion } from 'src/app/models';
 
@@ -9,6 +9,8 @@ import { IQuestion } from 'src/app/models';
 })
 export class QuestionCardComponent implements OnInit {
   @Input() question: IQuestion;
+
+  @Output() refresh = new EventEmitter<null>();
 
   constructor() {}
 

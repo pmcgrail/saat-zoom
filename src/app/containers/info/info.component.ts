@@ -13,5 +13,9 @@ export class InfoComponent implements OnInit {
 
   constructor(private iceBreakersService: IceBreakersService) {}
 
+  refreshQuestion() {
+    this.question$ = this.iceBreakersService.getRandomQuestion();
+  }
+
   ngOnInit(): void {}
 }
