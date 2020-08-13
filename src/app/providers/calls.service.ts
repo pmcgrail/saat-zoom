@@ -30,6 +30,7 @@ export class CallsService {
             return {
               datetime: data.datetime.toDate(),
               host: data.host,
+              link: data.link,
             };
           });
         })
