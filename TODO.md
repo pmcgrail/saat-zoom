@@ -34,8 +34,8 @@ TODO:
 - [x] firebase store for zoom calls
 - [x] render list based on firebase data
 - [x] 0.0.3
-- [ ] about page from Shelly
-- [ ] 0.0.4
+- [x] about page from Shelly
+- [x] 0.0.4
 - [ ] firebase auth for admins
 - [ ] admin page to create zoom calls
 - [ ] 0.1.0
