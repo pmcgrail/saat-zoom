@@ -5,7 +5,7 @@ import {
   DocumentChangeAction,
 } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { map, retry } from 'rxjs/operators';
 
 import { IQuestion } from '../models';
 
@@ -25,7 +25,8 @@ export class IceBreakersService {
       .pipe(
         map((question: DocumentChangeAction<IQuestion>[]) =>
           question[0].payload.doc.data()
-        )
+        ),
+        retry(1)
       );
   }
 }
