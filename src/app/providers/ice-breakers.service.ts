@@ -4,8 +4,8 @@ import {
   CollectionReference,
   DocumentChangeAction,
 } from '@angular/fire/firestore';
-import { Observable } from 'rxjs';
-import { map, retry } from 'rxjs/operators';
+import { Observable, of } from 'rxjs';
+import { map, retry, switchMap } from 'rxjs/operators';
 
 import { IQuestion } from '../models';
 
@@ -19,14 +19,30 @@ export class IceBreakersService {
     const randomId = this.firestore.createId();
     return this.firestore
       .collection('ice-breakers', (ref: CollectionReference) =>
-        ref.where('__name__', '>', randomId).limit(1)
+        ref.where('__name__', '>=', randomId).orderBy('__name__').limit(1)
+      )
+      .snapshotChanges()
+      .pipe(
+        switchMap((question: DocumentChangeAction<IQuestion>[]) => {
+          if (question.length) {
+            return of(question[0].payload.doc.data());
+          }
+          return this.getFirstQuestion();
+        }),
+        retry(1)
+      );
+  }
+
+  getFirstQuestion(): Observable<IQuestion> {
+    return this.firestore
+      .collection('ice-breakers', (ref: CollectionReference) =>
+        ref.where('__name__', '>=', ' ').orderBy('__name__').limit(1)
       )
       .snapshotChanges()
       .pipe(
         map((question: DocumentChangeAction<IQuestion>[]) =>
           question[0].payload.doc.data()
-        ),
-        retry(1)
+        )
       );
   }
 }
