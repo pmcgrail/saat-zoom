@@ -4,5 +4,6 @@
       {{ call.datetime | date: "EEEE, MM/dd/yy 'at' h:mm a" }}
     </div>
     <div class="host"><span class="label">Host:</span>{{ call.host }}</div>
+    <mat-icon *ngIf="call.link" class="chevron">chevron_right</mat-icon>
   </a>
 </mat-card>
