@@ -19,6 +19,7 @@ import { InfoComponent } from './containers/info/info.component';
 import { QuestionCardComponent } from './components/question-card/question-card.component';
 import { QuestionFormComponent } from './components/question-form/question-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RulesComponent } from './containers/rules/rules.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     InfoComponent,
     QuestionCardComponent,
     QuestionFormComponent,
+    RulesComponent,
   ],
   imports: [
     BrowserModule,

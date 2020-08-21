@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './containers/home/home.component';
 import { AboutComponent } from './containers/about/about.component';
 import { InfoComponent } from './containers/info/info.component';
+import { RulesComponent } from './containers/rules/rules.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,10 @@ const routes: Routes = [
   {
     path: 'about',
     component: AboutComponent,
+  },
+  {
+    path: 'rules',
+    component: RulesComponent,
   },
   {
     path: '**',
