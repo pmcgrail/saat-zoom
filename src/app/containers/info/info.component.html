@@ -19,7 +19,7 @@
     them privately, or reach out via Facebook Messenger.
   </div>
   <br />
-  <h3>Ice-Breakers</h3>
+  <h3>Ice-Breakers (work-in-progress)</h3>
   <div>
     Random topics to discuss if your breakout room is dead:
   </div>
@@ -30,8 +30,10 @@
     ></app-question-card>
   </div>
   <br />
-  <h3>
-    Submit a question:
-  </h3>
-  <app-question-form (submitted)="submitQuestion($event)"></app-question-form>
+  <div>
+    Submit an ice-breaker:
+  </div>
+  <div class="form-container">
+    <app-question-form (submitted)="submitQuestion($event)"></app-question-form>
+  </div>
 </div>
