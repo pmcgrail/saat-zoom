@@ -36,7 +36,11 @@ export class IceBreakersService {
   getFirstQuestion(): Observable<IQuestion> {
     return this.firestore
       .collection('ice-breakers', (ref: CollectionReference) =>
-        ref.where('__name__', '>=', ' ').orderBy('__name__').limit(1)
+        ref
+          .where('approved', '==', true)
+          .where('__name__', '>=', ' ')
+          .orderBy('__name__')
+          .limit(1)
       )
       .snapshotChanges()
       .pipe(
@@ -44,5 +48,13 @@ export class IceBreakersService {
           question[0].payload.doc.data()
         )
       );
+  }
+
+  submitQuestion(question: IQuestion) {
+    const randomId = this.firestore.createId();
+    return this.firestore
+      .collection('ice-breakers')
+      .doc(randomId)
+      .set(question);
   }
 }
