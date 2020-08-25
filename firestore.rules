@@ -12,13 +12,16 @@ service cloud.firestore {
       allow write: if false;
     }
 
-    match /suggestions/{suggestionId} {
-      allow read, create: if true;
-      allow update, delete: if false;
+    match /users/{userId} {
+      allow read, write: if isOwner(userId);
+    }
+
+    function isOwner(userId) {
+    	return request.auth.uid == userId;
     }
 
     match /{document=**} {
-      allow read, write: if request.time < timestamp.date(2020, 8, 26);
+      allow read, write: if false;
     }
   }
 }
