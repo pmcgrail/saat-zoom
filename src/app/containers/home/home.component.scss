@@ -7,6 +7,14 @@
     padding: 0 1em;
   }
 
+  .upcoming-calls-header {
+    display: flex;
+    align-items: center;
+    mat-icon {
+      margin-left: 0.3em;
+    }
+  }
+
   .upcoming-calls {
     display: flex;
     flex-direction: column;

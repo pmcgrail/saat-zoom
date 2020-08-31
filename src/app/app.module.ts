@@ -7,6 +7,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
@@ -18,7 +20,6 @@ import { AboutComponent } from './containers/about/about.component';
 import { InfoComponent } from './containers/info/info.component';
 import { QuestionCardComponent } from './components/question-card/question-card.component';
 import { QuestionFormComponent } from './components/question-form/question-form.component';
-import { ReactiveFormsModule } from '@angular/forms';
 import { RulesComponent } from './containers/rules/rules.component';
 
 @NgModule({
@@ -44,6 +45,7 @@ import { RulesComponent } from './containers/rules/rules.component';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
     ReactiveFormsModule,
+    MatTooltipModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

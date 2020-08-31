@@ -1,12 +1,18 @@
 <div class="home-container">
   <ng-container *ngIf="calls$ | async as calls">
     <ng-container *ngIf="calls.length; else empty">
-      <h2>The next call:</h2>
+      <h2 class="upcoming-calls-header">
+        Next call
+        <mat-icon
+          matTooltip="Times displayed in your local timezone. Calls typically last at least six hours."
+          >info_outline</mat-icon
+        >
+      </h2>
       <div class="upcoming-calls">
         <app-zoom-card class="next" [call]="calls[0]"> </app-zoom-card>
       </div>
       <ng-container *ngIf="calls.length > 1">
-        <h2>Other upcoming calls:</h2>
+        <h2>Upcoming calls</h2>
         <div class="upcoming-calls">
           <ng-container *ngFor="let call of calls.slice(1)">
             <app-zoom-card [call]="call"></app-zoom-card>
