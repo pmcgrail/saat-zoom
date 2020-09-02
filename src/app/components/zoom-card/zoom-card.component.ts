@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 
 import { IZoomCall } from '../../models';
 
@@ -6,11 +6,8 @@ import { IZoomCall } from '../../models';
   selector: 'app-zoom-card',
   templateUrl: './zoom-card.component.html',
   styleUrls: ['./zoom-card.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ZoomCardComponent implements OnInit {
+export class ZoomCardComponent {
   @Input() call: IZoomCall;
-
-  constructor() {}
-
-  ngOnInit(): void {}
 }

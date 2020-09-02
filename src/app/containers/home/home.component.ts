@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
-import { IZoomCall } from 'src/app/models';
+import { IZoomCall, IEvent } from 'src/app/models';
 import { CallsService } from '../../providers/calls.service';
+import { EventsService } from '../../providers/events.service';
 
 @Component({
   selector: 'app-home',
@@ -11,8 +12,9 @@ import { CallsService } from '../../providers/calls.service';
 })
 export class HomeComponent implements OnInit {
   calls$: Observable<IZoomCall[]> = this.service.getCalls();
+  events$: Observable<IEvent[]> = this.events.getEvents();
 
-  constructor(private service: CallsService) {}
+  constructor(private service: CallsService, private events: EventsService) {}
 
   ngOnInit(): void {}
 }
