@@ -7,9 +7,14 @@ service cloud.firestore {
       allow write: if false;
     }
 
-    match /ice-breakers/{ibId} {
+    match /events/{callId} {
       allow read: if true;
       allow write: if false;
+    }
+
+    match /ice-breakers/{ibId} {
+      allow read: if true;
+      allow write: if true;
     }
 
     match /users/{userId} {
