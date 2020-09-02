@@ -1,0 +1,7 @@
+<mat-card>
+  <div class="datetime">
+    {{ event.datetime | date: "EEEE, MM/dd/yy 'at' h:mm a" }}
+  </div>
+  <div class="title">{{ event.title }}</div>
+  <div>{{ event.description }}</div>
+</mat-card>

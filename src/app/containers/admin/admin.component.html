@@ -1,0 +1,14 @@
+<ng-container *ngIf="auth.user$ | async as user; else login">
+  <ng-container *ngIf="user.isAdmin; else restricted">
+    <div>admin works!</div>
+    <button (click)="logout()">Logout</button>
+  </ng-container>
+</ng-container>
+
+<ng-template #login>
+  <button (click)="showLogin()">Login</button>
+</ng-template>
+
+<ng-template #restricted>
+  Not approved as admin yet.
+</ng-template>

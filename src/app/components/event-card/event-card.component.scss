@@ -1,0 +1,18 @@
+mat-card {
+  margin-bottom: 1em;
+  font-size: 16px;
+
+  @media screen and (min-width: 480px) {
+    width: 18em;
+  }
+
+  .datetime {
+    font-weight: 500;
+    margin-bottom: 1em;
+  }
+
+  .title {
+    font-weight: 500;
+    margin-bottom: 1em;
+  }
+}

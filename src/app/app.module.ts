@@ -21,6 +21,8 @@ import { InfoComponent } from './containers/info/info.component';
 import { QuestionCardComponent } from './components/question-card/question-card.component';
 import { QuestionFormComponent } from './components/question-form/question-form.component';
 import { RulesComponent } from './containers/rules/rules.component';
+import { AdminComponent } from './containers/admin/admin.component';
+import { EventCardComponent } from './components/event-card/event-card.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,8 @@ import { RulesComponent } from './containers/rules/rules.component';
     QuestionCardComponent,
     QuestionFormComponent,
     RulesComponent,
+    AdminComponent,
+    EventCardComponent,
   ],
   imports: [
     BrowserModule,
