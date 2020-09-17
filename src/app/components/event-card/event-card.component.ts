@@ -13,8 +13,11 @@ export class EventCardComponent {
   get countdown() {
     const diff = new Date(this.event.datetime).getTime() - new Date().getTime();
     const hours = diff / (1000 * 60 * 60);
+    const minutes = diff / (1000 * 60);
     return hours > 24
-      ? `In ${Math.floor(hours / 24)} day(s)`
-      : `In ${Math.floor(hours)} hour(s)`;
+      ? `Event starts in ${Math.round(hours / 24)} day(s)`
+      : hours > 1
+      ? `Event starts in ${Math.floor(hours)} hour(s)`
+      : `Event starts in ${Math.floor(minutes)} minute(s)`;
   }
 }
