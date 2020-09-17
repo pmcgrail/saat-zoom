@@ -22,7 +22,7 @@ export class ZoomCardComponent {
         ? `Call starts in ${Math.floor(hours)} hour(s)`
         : `Call starts in ${Math.floor(minutes)} minute(s)`;
     }
-    return hours > 1
+    return Math.abs(hours) > 1
       ? `Call started ${-Math.floor(hours)} hour(s) ago`
       : `Call started ${-Math.floor(minutes)} minute(s) ago`;
   }
