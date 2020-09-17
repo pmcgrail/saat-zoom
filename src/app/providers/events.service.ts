@@ -31,6 +31,7 @@ export class EventsService {
               datetime: data.datetime.toDate(),
               title: data.title,
               description: data.description,
+              link: data.link,
             };
           });
         })
