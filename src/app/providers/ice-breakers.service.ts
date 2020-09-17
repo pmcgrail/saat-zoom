@@ -55,6 +55,6 @@ export class IceBreakersService {
     return this.firestore
       .collection('ice-breakers')
       .doc(randomId)
-      .set(question);
+      .set({ ...question, approved: false });
   }
 }
